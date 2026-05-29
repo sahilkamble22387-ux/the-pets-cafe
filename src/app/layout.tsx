@@ -1,58 +1,53 @@
 import type { Metadata } from "next";
-import { Geist } from "next/font/google";
-import { Playfair_Display, Cormorant_Garamond } from "next/font/google";
+import { DM_Serif_Display, DM_Sans } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const dmSerif = DM_Serif_Display({
+  variable: "--font-dm-serif",
   subsets: ["latin"],
-});
-
-const playfair = Playfair_Display({
-  variable: "--font-playfair",
-  subsets: ["latin"],
+  weight: "400",
   display: "swap",
 });
 
-const cormorant = Cormorant_Garamond({
-  variable: "--font-cormorant",
+const dmSans = DM_Sans({
+  variable: "--font-dm-sans",
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
   display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "Vohuman Cafe | Pune's Legendary Irani Cafe Since 1978",
+  title: "Chafá Café & Studio | Where Wellness Meets Flavour",
   description:
-    "Experience the warmth of Pune's most iconic Irani cafe. Serving legendary cheese omelettes, bun maska, and Irani chai since 1978. Where every cup tells a story.",
+    "Gourmet, wholesome, tasty and healthy food made with love! Chafá is a health-focused café with an integrated fitness studio in Pune. Clean eating, great coffee, yoga, HIIT, and community events.",
   keywords: [
-    "Vohuman Cafe",
-    "Irani Cafe",
-    "Pune",
-    "Cheese Omelette",
-    "Bun Maska",
-    "Irani Chai",
-    "Parsee Cafe",
-    "Pune Food",
-    "Heritage Cafe",
-    "Since 1978",
+    "Chafa Cafe",
+    "Chafa Studio",
+    "Healthy Food Pune",
+    "Koregaon Park Cafe",
+    "Wanowrie Cafe",
+    "Bavdhan Cafe",
+    "Yoga Studio Pune",
+    "Healthy Cafe",
+    "Smoothie Bowl",
+    "Clean Eating",
+    "Wellness Cafe",
   ],
-  authors: [{ name: "Vohuman Cafe" }],
+  authors: [{ name: "Chafá Café & Studio" }],
   icons: {
     icon: "/favicon.ico",
   },
   openGraph: {
-    title: "Vohuman Cafe | Pune's Legendary Irani Cafe Since 1978",
+    title: "Chafá Café & Studio | Where Wellness Meets Flavour",
     description:
-      "Experience the warmth of Pune's most iconic Irani cafe. Serving legendary cheese omelettes, bun maska, and Irani chai since 1978.",
+      "Gourmet, wholesome, tasty and healthy food made with love! Health-focused café with fitness studio in Pune.",
     type: "website",
     locale: "en_IN",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Vohuman Cafe | Pune's Legendary Irani Cafe Since 1978",
+    title: "Chafá Café & Studio | Where Wellness Meets Flavour",
     description:
-      "Experience the warmth of Pune's most iconic Irani cafe since 1978.",
+      "Gourmet, wholesome, tasty and healthy food made with love! Health-focused café with fitness studio in Pune.",
   },
 };
 
@@ -64,7 +59,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${playfair.variable} ${cormorant.variable} antialiased bg-background text-foreground`}
+        className={`${dmSerif.variable} ${dmSans.variable} antialiased bg-background text-foreground`}
       >
         {children}
       </body>
